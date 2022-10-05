@@ -61,19 +61,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1e9-1y-nhW">
-                            <size key="itemSize" width="128" height="128"/>
+                            <size key="itemSize" width="100" height="100"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="msg-rq-1Od">
-                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCollectionViewCell" id="msg-rq-1Od" customClass="PhotoCollectionViewCell" customModule="CameraFilter" customModuleProvider="target">
+                                <rect key="frame" x="10" y="10" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="7Pv-0N-Ad0">
-                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Eiv-Ch-1m4">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Eiv-Ch-1m4" firstAttribute="width" secondItem="7Pv-0N-Ad0" secondAttribute="width" id="69W-bR-NzZ"/>
+                                        <constraint firstItem="Eiv-Ch-1m4" firstAttribute="height" secondItem="7Pv-0N-Ad0" secondAttribute="height" id="SZJ-Hx-eII"/>
+                                        <constraint firstItem="Eiv-Ch-1m4" firstAttribute="top" secondItem="7Pv-0N-Ad0" secondAttribute="top" id="oWm-MA-mOi"/>
+                                        <constraint firstItem="Eiv-Ch-1m4" firstAttribute="leading" secondItem="7Pv-0N-Ad0" secondAttribute="leading" id="yjh-TM-NNg"/>
+                                    </constraints>
                                 </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="photoImageView" destination="Eiv-Ch-1m4" id="a0G-fp-U6a"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -85,7 +99,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YKJ-A6-sBc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2720" y="4"/>
+            <point key="canvasLocation" x="2720" y="3.5545023696682461"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HH8-4J-ufT">
