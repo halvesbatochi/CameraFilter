@@ -13,7 +13,7 @@ import RxSwift
 class PhotoCollectionViewController: UICollectionViewController {
     
     
-    private let selectedPhotoSubject = PublishSubject<UIImage>
+    private let selectedPhotoSubject = PublishSubject<UIImage>()
     var selectedPhoto: Observable<UIImage> {
         return selectedPhotoSubject.asObservable()
     }
